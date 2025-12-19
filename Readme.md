@@ -1,17 +1,39 @@
-This repro contains all files needed for a full unattended Packer installation for Windows. It supportes the following operating systems
+# Packer – Unattended Windows Builds for Proxmox
 
-proxmox-windows-server-2016-core
-proxmox-windows-server-2016-desktop
-proxmox-windows-server-2019-core
-proxmox-windows-server-2019-desktop
-proxmox-windows-server-2022-core
-proxmox-windows-server-2022-desktop
-proxmox-windows-server-2025-core
-proxmox-windows-server-2025-desktop
+This repository contains all files needed for a **fully unattended Windows installation using Packer on Proxmox**.  
+The setup is designed around reproducibility, transparency, and a clean-source mindset.
 
-Use the Following to initiate:
+The configurations in this repository support the following operating systems:
 
-cd to one of the directories
-Packer init.
-Packer validate .
-Packer build. 
+- proxmox-windows-server-2016-core  
+- proxmox-windows-server-2016-desktop  
+- proxmox-windows-server-2019-core  
+- proxmox-windows-server-2019-desktop  
+- proxmox-windows-server-2022-core  
+- proxmox-windows-server-2022-desktop  
+- proxmox-windows-server-2025-core  
+- proxmox-windows-server-2025-desktop  
+
+Each directory contains everything required to build a reusable Proxmox template for the specified Windows version and edition.
+
+---
+
+## Prerequisites
+
+Before starting, make sure you have:
+
+- A working Proxmox environment
+- A Proxmox API user and token configured for automation
+- Windows installation ISO(s) available in Proxmox
+- VirtIO driver ISO available in Proxmox
+- Packer installed on the system running the build
+
+---
+
+## Getting started
+
+To start a build, follow these steps:
+
+1. Change directory to one of the build folders:
+   ```bash
+   cd proxmox-windows-server-2025-core

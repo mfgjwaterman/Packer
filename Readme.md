@@ -37,3 +37,11 @@ To start a build, follow these steps:
 1. Change directory to one of the build folders:
    ```bash
    cd proxmox-windows-server-2025-core
+2. Initialize Packer and download required plugins:
+   ```packer init .
+3. Validate the configuration:
+   ```packer validate .
+4. Start the build:
+   ```packer build .
+
+

@@ -1,5 +1,7 @@
 # Packer – Unattended Windows Builds for Proxmox
 
+Full guide, here: https://michaelwaterman.nl/2025/12/19/from-clickops-to-devops-building-secure-windows-images-with-packer-on-proxmox/
+
 This repository contains all files needed for a **fully unattended Windows installation using Packer on Proxmox**.  
 The setup is designed around reproducibility, transparency, and a clean-source mindset.
 
@@ -42,5 +44,6 @@ To start a build, follow these steps:
    `packer validate .`
 4. Start the build:
    `packer build .`
+
 
 

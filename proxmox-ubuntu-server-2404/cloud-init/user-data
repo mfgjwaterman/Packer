@@ -1,0 +1,35 @@
+#cloud-config
+autoinstall:
+  version: 1
+  updates: all
+  
+  identity:
+    hostname: ubuntu-2404
+    username: superuser
+    # use openssl passwd -6 <password>
+    password: <Set your login password>
+
+  locale: en_US.UTF-8
+  keyboard:
+    layout: "us"
+
+  storage:
+    layout:
+      name: lvm
+      sizing-policy: all
+
+  ssh:
+    install-server: true
+    # set allow-pw: true for password login
+    allow-pw: false
+    authorized-keys:
+      - "<Set your SSH login password>"
+
+  packages:
+    - qemu-guest-agent
+    - cloud-init
+
+  timezone: "Europe/Amsterdam"
+
+  late-commands:
+    - curtin in-target --target=/target -- bash -c 'echo "superuser ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-packer && chmod 440 /etc/sudoers.d/90-packer'

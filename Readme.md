@@ -9,7 +9,7 @@ The configurations in this repository support the following operating systems:
 
 - proxmox-ubuntu-desktop-2404
 - proxmox-ubuntu-server-2404
-- proxmox-windows-11-25H2-professional-core  
+- proxmox-windows-11-25H2-professional
 - proxmox-windows-server-2016-core  
 - proxmox-windows-server-2016-desktop  
 - proxmox-windows-server-2019-core  
@@ -47,6 +47,7 @@ To start a build, follow these steps:
    `packer validate .`
 4. Start the build:
    `packer build .`
+
 
 
 

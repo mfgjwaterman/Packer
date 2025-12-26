@@ -191,17 +191,17 @@ build {
   # -------------------------------------------------------------------------
   # Windows Updates
   # -------------------------------------------------------------------------
-  # provisioner "windows-update" {
-  #   search_criteria = "IsInstalled=0"
+  provisioner "windows-update" {
+    search_criteria = "IsInstalled=0"
   
-  #   filters = [
-  #     "exclude:$_.Title -like '*Driver*'",
-  #     "exclude:$_.Title -like '*Preview*'",
-  #     "include:$true",
-  #   ]
+    filters = [
+      "exclude:$_.Title -like '*Driver*'",
+      "exclude:$_.Title -like '*Preview*'",
+      "include:$true",
+    ]
   
-  #   update_limit = 50
-  # }
+    update_limit = 50
+  }
 
   # -------------------------------------------------------------------------
   # Upload the unattended file
@@ -252,4 +252,5 @@ build {
       "C:\\Windows\\System32\\Sysprep\\sysprep.exe /generalize /oobe /quiet /shutdown /unattend:C:\\Windows\\System32\\Sysprep\\unattend.xml"
     ]
   }
+
 }

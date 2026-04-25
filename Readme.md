@@ -44,7 +44,7 @@ Before starting, make sure you have:
 - VirtIO driver ISO available in Proxmox (Proxmox only)
 - Packer installed on the system running the build
 - Installed the latest Windows ADK on the build machine
-- Set the path to oscdimg.exe file in the environement variables
+- Set the path to oscdimg.exe file in the environment variables
 
 ---
 

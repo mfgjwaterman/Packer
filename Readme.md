@@ -1,4 +1,4 @@
-# Packer – Unattended Windows Builds for Hyper-v or Proxmox
+# Packer – Unattended Windows Builds for Hyper-v and Proxmox
 
 Update: 25-04-2026, added configurations for Hyper-v installations.
 

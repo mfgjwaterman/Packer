@@ -1,12 +1,23 @@
 # Packer – Unattended Windows Builds for Proxmox (and a bit of Linux)
 
+Update: 25-04-2026, added configurations for Hyper-v installations.
+
 Full guide, here: https://michaelwaterman.nl/2025/12/19/from-clickops-to-devops-building-secure-windows-images-with-packer-on-proxmox/
 
-This repository contains all files needed for a **fully unattended Windows installation using Packer on Proxmox**.  
+This repository contains all files needed for a **fully unattended Windows installation using Packer on Hyper-v or Proxmox**.  
 The setup is designed around reproducibility, transparency, and a clean-source mindset.
 
 The configurations in this repository support the following operating systems:
 
+- hyperv-windows-11-25h2-enterprise
+- hyperv-windows-server-2016-core
+- hyperv-windows-server-2016-dekstop
+- hyperv-windows-server-2019-core
+- hyperv-windows-server-2019-dekstop
+- hyperv-windows-server-2022-core
+- hyperv-windows-server-2022-dekstop
+- hyperv-windows-server-2025-core
+- hyperv-windows-server-2025-dekstop
 - proxmox-ubuntu-desktop-2404
 - proxmox-ubuntu-server-2404
 - proxmox-windows-11-25H2-professional
@@ -19,7 +30,7 @@ The configurations in this repository support the following operating systems:
 - proxmox-windows-server-2025-core  
 - proxmox-windows-server-2025-desktop  
 
-Each directory contains everything required to build a reusable Proxmox template for the specified Windows version and edition.
+Each directory contains everything required to build a reusable Hyper-v or Proxmox template for the specified Windows version and edition.
 
 ---
 
@@ -27,11 +38,13 @@ Each directory contains everything required to build a reusable Proxmox template
 
 Before starting, make sure you have:
 
-- A working Proxmox environment
-- A Proxmox API user and token configured for automation
-- Windows installation ISO(s) available in Proxmox
-- VirtIO driver ISO available in Proxmox
+- A working Hyper-v Proxmox environment
+- A Proxmox API user and token configured for automation (Proxmox only)
+- Windows installation ISO(s) available
+- VirtIO driver ISO available in Proxmox (Proxmox only)
 - Packer installed on the system running the build
+- Installed the latest Windows ADK on the build machine
+- Set the path to oscdimg.exe file in the environement variables
 
 ---
 

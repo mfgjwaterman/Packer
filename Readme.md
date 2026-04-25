@@ -38,7 +38,7 @@ Each directory contains everything required to build a reusable Hyper-v or Proxm
 
 Before starting, make sure you have:
 
-- A working Hyper-v Proxmox environment
+- A working Hyper-v or Proxmox environment
 - A Proxmox API user and token configured for automation (Proxmox only)
 - Windows installation ISO(s) available
 - VirtIO driver ISO available in Proxmox (Proxmox only)

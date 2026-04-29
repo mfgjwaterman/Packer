@@ -2,7 +2,7 @@
 
 Update: 25-04-2026, added configurations for Hyper-v installations.
 
-Full guide, here: https://michaelwaterman.nl/2025/12/19/from-clickops-to-devops-building-secure-windows-images-with-packer-on-proxmox/
+Full guide, here: https://michaelwaterman.nl/2026/04/29/building-windows-images-with-packer-on-hyper-v/ And https://michaelwaterman.nl/2025/12/19/from-clickops-to-devops-building-secure-windows-images-with-packer-on-proxmox/
 
 This repository contains all files needed for a **fully unattended Windows installation using Packer on Hyper-v or Proxmox**.  
 The setup is designed around reproducibility, transparency, and a clean-source mindset.
